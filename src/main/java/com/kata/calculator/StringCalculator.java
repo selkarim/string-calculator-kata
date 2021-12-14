@@ -15,7 +15,6 @@ public abstract class StringCalculator {
 
     private static void traitNegativeNumbersInput(List<Integer> numbers) {
         List<Integer> negativeNumbers = numbers.stream().filter(num -> num < 0).collect(Collectors.toList());
-        ;
         if (!negativeNumbers.isEmpty()) {
             throw new IllegalArgumentException("negatives not allowed: " + negativeNumbers.toString());
         }
